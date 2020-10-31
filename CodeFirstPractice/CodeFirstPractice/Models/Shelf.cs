@@ -13,5 +13,12 @@ namespace CodeFirstPractice.Models
         
         [Column(TypeName = "varchar(50)")]
         public string Name { get; set; }
+        
+        [Column(TypeName = "int(10)")]
+        public int ShelfMaterialID { get; set; }
+        
+        [ForeignKey(nameof(ShelfMaterialID))]
+        [InverseProperty(nameof(Models.Shelf_Material.ID))]
+        public virtual Shelf_Material ShelfMaterial { get; set; }
     }
 }
