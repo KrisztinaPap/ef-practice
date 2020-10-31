@@ -23,11 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c66ada-a328-4897-9760-a5d5b0e067a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +38,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" />
         <option value="$PROJECT_DIR$/CodeFirstPractice/Program.cs" />
         <option value="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf_Material.cs" />
         <option value="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf.cs" />
+        <option value="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +89,7 @@
       <updated>1604084118356</updated>
       <workItem from="1604084128961" duration="3858000" />
       <workItem from="1604096937779" duration="625000" />
-      <workItem from="1604178969305" duration="645000" />
+      <workItem from="1604178969305" duration="1336000" />
     </task>
     <servers />
   </component>

@@ -58,6 +58,22 @@ namespace CodeFirstPractice.Models
                         Name = "Baked goods"
                     }
                 );
+                modelBuilder.Entity<Shelf_Material>(entity =>
+                {
+                    string keyString = "FK_" + nameof(Shelf) + "_" + nameof(Shelf_Material);
+
+                    entity.Property(e => e.MaterialName)
+                        .HasCharSet("utf8mb4")
+                        .HasCollation("utf8mb4_general_ci");
+
+                    entity.HasIndex(e => e.ID).HasName(keyString);
+
+                    entity.HasOne(e => e.Shelf)
+                        .WithMany(p => p.ShelfMaterials)
+                        .HasForeignKey(e => e.ID)
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasConstraintName(keyString);
+                });
             });
         }
     }

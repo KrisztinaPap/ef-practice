@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,6 +7,11 @@ namespace CodeFirstPractice.Models
     [Table("shelf")]
     public class Shelf
     {
+        public Shelf()
+        {
+            ShelfMaterials = new HashSet<Shelf_Material>();
+        }
+        
         [Key]
         [Column(TypeName = "int(10)")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,6 +25,6 @@ namespace CodeFirstPractice.Models
         
         [ForeignKey(nameof(ShelfMaterialID))]
         [InverseProperty(nameof(Models.Shelf_Material.ID))]
-        public virtual Shelf_Material ShelfMaterial { get; set; }
+        public virtual ICollection<Shelf_Material> ShelfMaterials { get; set; }
     }
 }
