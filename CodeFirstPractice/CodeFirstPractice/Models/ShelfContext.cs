@@ -85,17 +85,17 @@ namespace CodeFirstPractice.Models
                         new Shelf_Material()
                         {
                             ID = -1,
-                            Name = "Milk"
+                            MaterialName = "Milk"
                         },
                         new Shelf_Material()
                         {
                             ID = -1,
-                            Name = "Chocolate"
+                            MaterialName = "Chocolate"
                         },
                         new Shelf_Material()
                         {
                             ID = -1,
-                            Name = "yogurt"
+                            MaterialName = "yogurt"
                         }
                     );
                 });
