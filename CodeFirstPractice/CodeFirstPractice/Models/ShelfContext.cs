@@ -6,6 +6,7 @@ namespace CodeFirstPractice.Models
     public class ShelfContext : DbContext
     {
         public virtual DbSet<Shelf> Shelves { get; set; }
+        public virtual DbSet<Shelf_Material> ShelfMaterials { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +31,16 @@ namespace CodeFirstPractice.Models
                 entity.Property(e => e.Name)
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
+                
+                string keyString = "FK_" + nameof(Shelf) + "_" + nameof(Shelf_Material);
+
+                entity.HasIndex(e => e.ShelfMaterialID).hasName(keyString);
+
+                entity.HasOne(e => e.Shelf)
+                    .WithMany(p => p.ShelfMaterials)
+                    .HasForeignKey(e => e.ShelfMaterialID)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName(keyString);
 
                 entity.HasData(
                     new Shelf()
@@ -60,7 +71,7 @@ namespace CodeFirstPractice.Models
                 );
                 modelBuilder.Entity<Shelf_Material>(entity =>
                 {
-                    string keyString = "FK_" + nameof(Shelf) + "_" + nameof(Shelf_Material);
+                    
 
                     entity.Property(e => e.MaterialName)
                         .HasCharSet("utf8mb4")
@@ -68,11 +79,7 @@ namespace CodeFirstPractice.Models
 
                     entity.HasIndex(e => e.ID).HasName(keyString);
 
-                    entity.HasOne(e => e.Shelf)
-                        .WithMany(p => p.ShelfMaterials)
-                        .HasForeignKey(e => e.ID)
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .HasConstraintName(keyString);
+                   
                 });
             });
         }
