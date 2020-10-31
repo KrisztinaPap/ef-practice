@@ -71,15 +71,10 @@ namespace CodeFirstPractice.Models
                 );
                 modelBuilder.Entity<Shelf_Material>(entity =>
                 {
-                    
-
                     entity.Property(e => e.MaterialName)
                         .HasCharSet("utf8mb4")
                         .HasCollation("utf8mb4_general_ci");
-
-                    entity.HasIndex(e => e.ID).HasName(keyString);
-
-                   
+                    
                 });
             });
         }
