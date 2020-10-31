@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3147b3-d110-41d3-a90e-2624b68cd1a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeFirstPractice/CodeFirstPractice.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/CodeFirstPractice.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" afterDir="false" />
-    </list>
+    <list default="true" id="3e3147b3-d110-41d3-a90e-2624b68cd1a8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604181809496</updated>
-      <workItem from="1604181814754" duration="416000" />
+      <workItem from="1604181814754" duration="980000" />
     </task>
     <servers />
   </component>

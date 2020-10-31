@@ -32,9 +32,10 @@ namespace CodeFirstPractice.Models
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
                 
-                string keyString = "FK_" + nameof(Shelf) + "_" + nameof(Shelf_Material);
+                string keyString = "FK_" + nameof(Shelf_Material) + "_" + nameof(Shelf);
 
-                entity.HasIndex(e => e.ShelfMaterialID).hasName(keyString);
+                entity.HasIndex(e => e.ShelfMaterialID)
+                    .hasName(keyString);
 
                 entity.HasOne(e => e.Shelf)
                     .WithMany(p => p.ShelfMaterials)
@@ -46,27 +47,32 @@ namespace CodeFirstPractice.Models
                     new Shelf()
                     {
                         ID = -1,
-                        Name = "Dairy"
+                        Name = "Dairy",
+                        ShelfMaterialID = -1
                     },
                     new Shelf()
                     {
                         ID = -2,
-                        Name = "Vegetables"
+                        Name = "Vegetables",
+                        ShelfMaterialID = -1
                     },
                     new Shelf()
                     {
                         ID = -3,
-                        Name = "Candy"
+                        Name = "Candy",
+                        ShelfMaterialID = -1
                     },
                     new Shelf()
                     {
                         ID = -4,
-                        Name = "Medicine"
+                        Name = "Medicine",
+                        ShelfMaterialID = -1
                     },
                     new Shelf()
                     {
                         ID = -5,
-                        Name = "Baked goods"
+                        Name = "Baked goods",
+                        ShelfMaterialID = -1
                     }
                 );
                 modelBuilder.Entity<Shelf_Material>(entity =>
@@ -75,6 +81,23 @@ namespace CodeFirstPractice.Models
                         .HasCharSet("utf8mb4")
                         .HasCollation("utf8mb4_general_ci");
                     
+                    entity.HasData(
+                        new Shelf_Material()
+                        {
+                            ID = -1,
+                            Name = "Milk"
+                        },
+                        new Shelf_Material()
+                        {
+                            ID = -1,
+                            Name = "Chocolate"
+                        },
+                        new Shelf_Material()
+                        {
+                            ID = -1,
+                            Name = "yogurt"
+                        }
+                    );
                 });
             });
         }
