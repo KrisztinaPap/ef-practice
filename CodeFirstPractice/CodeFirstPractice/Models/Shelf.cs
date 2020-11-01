@@ -23,8 +23,9 @@ namespace CodeFirstPractice.Models
         public int ShelfMaterialID { get; set; }
         
         [ForeignKey(nameof(ShelfMaterialID))]
-        [InverseProperty(nameof(Models.Shelf_Material.ShelfList))]
+        [InverseProperty(nameof(Models.Shelf_Material.Shelves))]
         
-        public virtual Shelf_Material Shelf_Material { get; set; }
+       public virtual Shelf_Material ShelfMaterial { get; set; }
+        
     }
 }

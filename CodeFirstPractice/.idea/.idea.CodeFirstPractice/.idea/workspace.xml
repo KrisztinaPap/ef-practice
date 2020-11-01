@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15c66ada-a328-4897-9760-a5d5b0e067a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFirstPractice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Migrations/ShelfContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Migrations/ShelfContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf_Material.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf_Material.cs" afterDir="false" />
@@ -40,9 +41,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CodeFirstPractice/Program.cs" />
-        <option value="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf_Material.cs" />
         <option value="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf.cs" />
         <option value="$PROJECT_DIR$/CodeFirstPractice/Models/ShelfContext.cs" />
+        <option value="$PROJECT_DIR$/CodeFirstPractice/Models/Shelf_Material.cs" />
       </list>
     </option>
   </component>
@@ -93,7 +94,7 @@
       <workItem from="1604178969305" duration="2790000" />
       <workItem from="1604199054273" duration="553000" />
       <workItem from="1604202467302" duration="2023000" />
-      <workItem from="1604250982322" duration="541000" />
+      <workItem from="1604250982322" duration="1660000" />
     </task>
     <servers />
   </component>

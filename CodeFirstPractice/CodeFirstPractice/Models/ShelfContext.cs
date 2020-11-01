@@ -10,7 +10,7 @@ namespace CodeFirstPractice.Models
     public class ShelfContext : DbContext
     {
         public virtual DbSet<Shelf> Shelves { get; set; }
-     
+        public virtual DbSet<Shelf_Material> Shelf_Material { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,18 +33,20 @@ namespace CodeFirstPractice.Models
             modelBuilder.Entity<Shelf>(entity =>
             {
                 
-                string keyName = "FK_" + nameof(Shelf_Material) +
+                string keyName = "FK_" + nameof(Models.Shelf_Material) +
                                  "_" + nameof(Shelf);
                 
                 entity.Property(e => e.Name)
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
                 
+                entity.Property(e => e.ID);
+                
                 entity.HasIndex(e => e.ShelfMaterialID)
                     .HasName(keyName);
                 
-                entity.HasOne(thisEntity => thisEntity.Shelf_Material)
-                    .WithMany(parent => parent.ShelfList)
+                entity.HasOne(thisEntity => thisEntity.ShelfMaterial)
+                    .WithMany(parent => parent.Shelves)
                     .HasForeignKey(thisEntity => thisEntity.ShelfMaterialID)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName(keyName);
@@ -88,6 +90,8 @@ namespace CodeFirstPractice.Models
                 entity.Property(e => e.MaterialName)
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
+                
+                entity.Property(e => e.ID);
                     
                 entity.HasData(
                     new Shelf_Material()
