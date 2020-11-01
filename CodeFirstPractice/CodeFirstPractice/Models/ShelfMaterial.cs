@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CodeFirstPractice.Models
 {
-    [Table("shelf_material")]
+    [Table( "shelf_material") ]
     public class Shelf_Material
     {
      
@@ -14,9 +14,6 @@ namespace CodeFirstPractice.Models
         
         [Column(TypeName = "varchar(25)")]
         public string MaterialName { get; set; }
-        
-        [InverseProperty(nameof(Models.Shelf.ID))]
-        public virtual Shelf Shelf { get; set; }
-        
+
     }
 }

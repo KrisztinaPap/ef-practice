@@ -6,7 +6,7 @@ namespace CodeFirstPractice.Models
     public class ShelfContext : DbContext
     {
         public virtual DbSet<Shelf> Shelves { get; set; }
-        public virtual DbSet<Shelf_Material> ShelfMaterials { get; set; }
+     
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -32,16 +32,6 @@ namespace CodeFirstPractice.Models
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
                 
-                string keyString = "FK_" + nameof(Shelf_Material) + "_" + nameof(Shelf);
-
-                entity.HasIndex(e => e.ShelfMaterialID)
-                    .hasName(keyString);
-
-                entity.HasOne(e => e.Shelf)
-                    .WithMany(p => p.ShelfMaterials)
-                    .HasForeignKey(e => e.ShelfMaterialID)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName(keyString);
 
                 entity.HasData(
                     new Shelf()
@@ -75,30 +65,31 @@ namespace CodeFirstPractice.Models
                         ShelfMaterialID = -1
                     }
                 );
-                modelBuilder.Entity<Shelf_Material>(entity =>
-                {
-                    entity.Property(e => e.MaterialName)
-                        .HasCharSet("utf8mb4")
-                        .HasCollation("utf8mb4_general_ci");
+               
+            });
+            modelBuilder.Entity<Shelf_Material>(entity =>
+            {
+                entity.Property(e => e.MaterialName)
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
                     
-                    entity.HasData(
-                        new Shelf_Material()
-                        {
-                            ID = -1,
-                            MaterialName = "Milk"
-                        },
-                        new Shelf_Material()
-                        {
-                            ID = -1,
-                            MaterialName = "Chocolate"
-                        },
-                        new Shelf_Material()
-                        {
-                            ID = -1,
-                            MaterialName = "yogurt"
-                        }
-                    );
-                });
+                entity.HasData(
+                    new Shelf_Material()
+                    {
+                        ID = -1,
+                        MaterialName = "Milk"
+                    },
+                    new Shelf_Material()
+                    {
+                        ID = -1,
+                        MaterialName = "Chocolate"
+                    },
+                    new Shelf_Material()
+                    {
+                        ID = -1,
+                        MaterialName = "yogurt"
+                    }
+                );
             });
         }
     }

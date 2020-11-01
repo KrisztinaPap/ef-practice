@@ -14,8 +14,4 @@
       <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.3" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Compile Remove="Models\Shelf_Material.cs" />
-    </ItemGroup>
-
 </Project>
