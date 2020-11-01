@@ -11,11 +11,6 @@ namespace CodeFirstPractice.Models
     [Table("shelf")]
     public class Shelf
     {
-        public Shelf()
-        {
-            ShelfMaterials = new HashSet<Shelf_Material>();
-        }
-        
         [Key]
         [Column(TypeName = "int(10)")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -28,8 +23,8 @@ namespace CodeFirstPractice.Models
         public int ShelfMaterialID { get; set; }
         
         [ForeignKey(nameof(ShelfMaterialID))]
-        [InverseProperty(nameof(Models.Shelf_Material.ID))]
-        public virtual ICollection<Shelf_Material> ShelfMaterials { get; set; }
+        [InverseProperty(nameof(Models.Shelf_Material.ShelfList))]
         
+        public virtual Shelf_Material Shelf_Material { get; set; }
     }
 }

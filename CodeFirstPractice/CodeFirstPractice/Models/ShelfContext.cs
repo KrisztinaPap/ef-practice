@@ -43,9 +43,9 @@ namespace CodeFirstPractice.Models
                 entity.HasIndex(e => e.ShelfMaterialID)
                     .HasName(keyName);
                 
-                entity.HasMany(e => e.ShelfMaterials)
-                    .WithOne(c=>c.ShelfMaterialID)
-                    .HasForeignKey(p => p.ShelfMaterialID)
+                entity.HasOne(thisEntity => thisEntity.Shelf_Material)
+                    .WithMany(parent => parent.ShelfList)
+                    .HasForeignKey(thisEntity => thisEntity.ShelfMaterialID)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName(keyName);
 
