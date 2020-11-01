@@ -62,23 +62,59 @@ namespace CodeFirstPractice.Models
                     {
                         ID = -2,
                         Name = "Vegetables",
-                        ShelfMaterialID = -1
+                        ShelfMaterialID = -2
                     },
                     new Shelf()
                     {
                         ID = -3,
                         Name = "Candy",
-                        ShelfMaterialID = -1
+                        ShelfMaterialID = -3
                     },
                     new Shelf()
                     {
                         ID = -4,
                         Name = "Medicine",
-                        ShelfMaterialID = -1
+                        ShelfMaterialID = -4
                     },
                     new Shelf()
                     {
                         ID = -5,
+                        Name = "Toys",
+                        ShelfMaterialID = -4
+                    },
+                    new Shelf()
+                    {
+                        ID = -6,
+                        Name = "Pet food",
+                        ShelfMaterialID = -1
+                    },
+                    new Shelf()
+                    {
+                        ID = -7,
+                        Name = "Ornaments",
+                        ShelfMaterialID = -3
+                    },
+                    new Shelf()
+                    {
+                        ID = -8,
+                        Name = "Tools",
+                        ShelfMaterialID = -1
+                    },
+                    new Shelf()
+                    {
+                        ID = -9,
+                        Name = "Cleaning supplies",
+                        ShelfMaterialID = -3
+                    },
+                    new Shelf()
+                    {
+                        ID = -10,
+                        Name = "Clothing",
+                        ShelfMaterialID = -2
+                    },
+                    new Shelf()
+                    {
+                        ID = -11,
                         Name = "Baked goods",
                         ShelfMaterialID = -1
                     }
@@ -97,17 +133,22 @@ namespace CodeFirstPractice.Models
                     new Shelf_Material()
                     {
                         ID = -1,
-                        MaterialName = "Milk"
+                        MaterialName = "oak"
                     },
                     new Shelf_Material()
                     {
                         ID = -2,
-                        MaterialName = "Chocolate"
+                        MaterialName = "spruce"
                     },
                     new Shelf_Material()
                     {
                         ID = -3,
-                        MaterialName = "yogurt"
+                        MaterialName = "birch"
+                    },
+                    new Shelf_Material()
+                    {
+                        ID = -4,
+                        MaterialName = "acacia"
                     }
                 );
             });

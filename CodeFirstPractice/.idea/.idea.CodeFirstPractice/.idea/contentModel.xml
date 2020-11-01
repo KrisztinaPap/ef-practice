@@ -8,6 +8,8 @@
         <e p="Migrations" t="Include">
           <e p="20201101174325_AddsShelfMaterials.cs" t="Include" />
           <e p="20201101174325_AddsShelfMaterials.Designer.cs" t="Include" />
+          <e p="20201101190006_AddsNewShelfSeed.cs" t="Include" />
+          <e p="20201101190006_AddsNewShelfSeed.Designer.cs" t="Include" />
           <e p="ShelfContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

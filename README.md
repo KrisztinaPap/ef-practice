@@ -4,7 +4,7 @@
 
 ## Date due: 11-02-2020
 
-## Last Edited: 10-30-2020
+## Last Edited: 11-01-2020
 
 ## Instructions
 
@@ -45,3 +45,4 @@ https://trello.com/b/FwwfGztD/entity-framework-code-first-migration-updates
 
 ## References/Citations
 - [Microsoft Docs: EF6 - Create a model > Use code first > Workflows](https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/existing-database)
+- Big shout-out to Lindsey Graham for clarifying what exactly the instructions required in this program!
