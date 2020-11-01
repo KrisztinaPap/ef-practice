@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,10 +32,22 @@ namespace CodeFirstPractice.Models
         {
             modelBuilder.Entity<Shelf>(entity =>
             {
+                
+                string keyName = "FK_" + nameof(Shelf_Material) +
+                                 "_" + nameof(Shelf);
+                
                 entity.Property(e => e.Name)
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
                 
+                entity.HasIndex(e => e.ShelfMaterialID)
+                    .HasName(keyName);
+                
+                entity.HasMany(e => e.ShelfMaterials)
+                    .WithOne(c=>c.ShelfMaterialID)
+                    .HasForeignKey(p => p.ShelfMaterialID)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName(keyName);
 
                 entity.HasData(
                     new Shelf()
@@ -81,12 +97,12 @@ namespace CodeFirstPractice.Models
                     },
                     new Shelf_Material()
                     {
-                        ID = -1,
+                        ID = -2,
                         MaterialName = "Chocolate"
                     },
                     new Shelf_Material()
                     {
-                        ID = -1,
+                        ID = -3,
                         MaterialName = "yogurt"
                     }
                 );
